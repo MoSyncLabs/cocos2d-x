@@ -182,3 +182,4 @@ It should work same as apples CFSwapInt32LittleToHost(..)
 #define CC_SWAP_INT16_BIG_TO_HOST(i)    ((CC_HOST_IS_BIG_ENDIAN == true)? (i):  CC_SWAP16(i) )
 
 #endif // __CCMACROS_H__
+

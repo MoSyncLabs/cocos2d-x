@@ -62,5 +62,18 @@ int CC_DLL gettimeofday(struct timeval * val, struct timezone *)
     return 0;
 }
 
+#elif ((CC_TARGET_PLATFORM) == CC_PLATFORM_MOSYNC)
+int CC_DLL gettimeofday_hack(struct timeval * val, struct timezone *)
+{
+    if (val)
+    {
+    	long long curTick = 0;
+    	curTick = maGetMilliSecondCount();
+    	unsigned int ms = curTick;
+    	val->tv_sec = ms / 1000;
+    	val->tv_usec = (ms % 1000) * 1000;
+    }
+    return 0;
+}
 
 #endif  // CC_PLATFORM_WIN32

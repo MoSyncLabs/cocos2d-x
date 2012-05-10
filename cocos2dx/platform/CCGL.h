@@ -141,7 +141,12 @@ extern PFNGLDELETEBUFFERSARBPROC 			glDeleteBuffersARB;
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_BADA)
 #include "GLES/gl.h"
 #include "GLES/glext.h"
+#endif
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_MOSYNC)
+#include <GLES/gl.h>
+#include <GLES/glext.h>
+const char* CC_DLL glGetString(GLenum e);
 #endif
 
 NS_CC_BEGIN;

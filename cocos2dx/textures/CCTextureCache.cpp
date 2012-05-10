@@ -38,8 +38,26 @@ THE SOFTWARE.
 #include "CCImage.h"
 #include "support/ccUtils.h"
 #include "CCScheduler.h"
+#ifndef CC_PLATFORM_MOSYNC
 #include "pthread.h"
+#endif
 #include "CCThread.h"
+
+#ifdef CC_PLATFORM_MOSYNC
+
+// make thread synchronous just to test if this works at all.
+typedef int pthread_mutex_t;
+typedef int pthread_cond_t;
+typedef int pthread_t;
+#define pthread_mutex_lock(x)
+#define pthread_cond_wait(x,y)
+#define pthread_mutex_unlock(x)
+#define pthread_mutex_init(x,y)
+#define pthread_cond_init(x,y)
+#define pthread_self() 1
+#define pthread_create(handle, unk, func, data) func(data)
+#define pthread_cond_signal(x)
+#endif
 
 namespace   cocos2d {
 

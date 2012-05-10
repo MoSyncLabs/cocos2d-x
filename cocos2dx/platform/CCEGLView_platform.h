@@ -41,6 +41,8 @@ THE SOFTWARE.
 	#include "Linux/CCEGLView_linux.h"
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_BADA)
 	#include "bada/CCEGLView_bada.h"
+#elif (CC_TARGET_PLATFORM == CC_PLATFORM_MOSYNC)
+	#include "mosync/CCEGLView_mosync.h"
 #else
     #error
 #endif

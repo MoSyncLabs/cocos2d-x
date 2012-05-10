@@ -126,6 +126,25 @@ int CC_DLL gettimeofday(struct timeval *, struct timezone *);
 
 #endif  // CC_TARGET_PLATFORM == CC_PLATFORM_AIRPLAY
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_MOSYNC)
+
+#include <ma.h>
+#include <sys/time.h>
+
+#ifndef MIN
+#define MIN(x,y) (((x) > (y)) ? (y) : (x))
+#endif  // MIN
+
+#ifndef MAX
+#define MAX(x,y) (((x) < (y)) ? (y) : (x))
+#endif  // MAX
+
+
+int CC_DLL gettimeofday_hack(struct timeval *, struct timezone *);
+#define gettimeofday gettimeofday_hack
+
+#endif  // CC_TARGET_PLATFORM == CC_PLATFORM_MOSYNC
+
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_BADA)
 
 #include <FSysSystemTime.h>

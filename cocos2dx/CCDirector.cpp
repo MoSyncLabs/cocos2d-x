@@ -331,7 +331,6 @@ void CCDirector::setProjection(ccDirectorProjection kProjection)
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
 		gluPerspective(60, (GLfloat)size.width/size.height, 0.5f, 1500.0f);
-			
 		glMatrixMode(GL_MODELVIEW);	
 		glLoadIdentity();
 		gluLookAt( size.width/2, size.height/2, zeye,
@@ -621,7 +620,7 @@ void CCDirector::purgeDirector()
 	CCScheduler::purgeSharedScheduler();
 	CCTextureCache::purgeSharedTextureCache();
 	
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_AIRPLAY)	
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_AIRPLAY && CC_TARGET_PLATFORM != CC_PLATFORM_MOSYNC)
 	CCUserDefault::purgeSharedUserDefault();
 #endif
 	// OpenGL view

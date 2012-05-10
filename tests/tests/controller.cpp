@@ -64,7 +64,7 @@ static TestScene* CreateTestScene(int nIdx)
 #endif
     case TEST_LABEL:
         pScene = new AtlasTestScene(); break;
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_AIRPLAY)
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_AIRPLAY && CC_TARGET_PLATFORM != CC_PLATFORM_MOSYNC)
     case TEST_TEXT_INPUT:
         pScene = new TextInputTestScene(); break;
 #endif
@@ -98,7 +98,7 @@ static TestScene* CreateTestScene(int nIdx)
         pScene = new PerformanceTestScene(); break;
     case TEST_ZWOPTEX:
         pScene = new ZwoptexTestScene(); break;
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_AIRPLAY)
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_AIRPLAY && CC_TARGET_PLATFORM != CC_PLATFORM_MOSYNC)
 // bada don't support libcurl
 #if (CC_TARGET_PLATFORM != CC_PLATFORM_BADA)
 	case TEST_CURL:
@@ -111,7 +111,7 @@ static TestScene* CreateTestScene(int nIdx)
         pScene = new DirectorTestScene(); break;
     case TEST_BUGS:
         pScene = new BugsTestScene(); break;
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_AIRPLAY)
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_AIRPLAY && CC_TARGET_PLATFORM != CC_PLATFORM_MOSYNC)
 	case TEST_FONTS:
 		pScene = new FontTestScene(); break;
 	case TEST_CURRENT_LANGUAGE:

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project supports-build-configs="true" version="1.4">
+<build.cfg id="Debug" types="Debug"/>
+<build.cfg id="Release" types="Release"/>
+<criteria>
+<filter type="com.mobilesorcery.sdk.capabilities.devices.elementfactory">
+<capabilities optional="" required="File\ Storage Internet\ Access"/>
+</filter>
+</criteria>
+<properties>
+<property key="build.prefs:additional.include.paths/Release" value="%mosync-home%/include/newlib/stlport, %mosync-home%/include/newlib, ./cocos2dx/include, ./CocosDenshion/include, ./cocos2dx/platform, ./cocos2dx, ./chipmunk/include, ./chipmunk/include/chipmunk, ./, ./cocos2dx/platform/third_party/mosync/zlib, ./cocos2dx/platform/third_party/mosync/expat/lib,  ./cocos2dx/platform/third_party/mosync"/>
+<property key="build.prefs:additional.libraries/Release" value="newlib.lib, MAFS.lib"/>
+<property key="build.prefs:additional.library.paths/Release" value="%mosync-home%/lib/newlib_release"/>
+<property key="build.prefs:app.permissions" value="File\ Storage Internet\ Access Vibration"/>
+<property key="build.prefs:dead.code.elim/Release" value="false"/>
+<property key="build.prefs:extra.link.sw/Release" value=""/>
+<property key="build.prefs:extra.res.sw/Release" value=""/>
+<property key="build.prefs:gcc.switches/Release" value="-O2 -std=c99 -DHAVE_EXPAT_CONFIG_H -DCC_TEXTURE_ATLAS_USE_TRIANGLE_STRIP -Wno-conversion"/>
+<property key="build.prefs:gcc.warnings/Release" value="0"/>
+<property key="build.prefs:ignore.default.include.paths/Release" value="true"/>
+<property key="build.prefs:ignore.default.libraries/Release" value="true"/>
+<property key="build.prefs:ignore.default.library.paths/Release" value="true"/>
+<property key="build.prefs:memory.data/Release" value="32768"/>
+<property key="build.prefs:memory.heap/Release" value="16384"/>
+<property key="build.prefs:memory.stack/Release" value="256"/>
+<property key="build.prefs:project.type" value=""/>
+<property key="dependency.strategy" value="0"/>
+<property key="excludes/Release" value="FinalOutput Output CocosDenshion template tests cocos2dx/platform/airplay cocos2dx/platform/android cocos2dx/platform/ios cocos2dx/platform/third_party cocos2dx/platform/win32 cocos2dx/platform/wophone libs cocos2dx/platform/CCSAXParser.cpp +cocos2dx/platform/third_party/mosync cocos2dx/platform/third_party/mosync/zlib/examples cocos2dx/platform/third_party/mosync/zlib/contrib cocos2dx/platform/third_party/mosync/expat/examples cocos2dx/platform/third_party/mosync/expat/tests cocos2dx/platform/third_party/mosync/expat/vms cocos2dx/platform/third_party/mosync/expat/xmlwf cocos2dx/platform/third_party/mosync/expat/lib/xmltok_impl.c cocos2dx/platform/third_party/mosync/expat/lib/xmltok_ns.c cocos2dx/support/CCUserDefault.cpp cocos2dx/platform/CCImage.cpp cocos2dx/platform/third_party/mosync/zlib/example.c +HelloWorld/mosync +HelloWorld/AppDelegate.cpp +HelloWorld/AppDelegate.h +HelloWorld/HelloWorldScene.cpp +HelloWorld/HelloWorldScene.h +tests/test.mosync HelloWorld +CocosDenshion/include +CocosDenshion/mosync HelloLua cocos2dx/platform/Linux cocos2dx/platform/bada licenses lua tools doxygen cocos2dx/platform/third_party/mosync/zlib/minigzip.c +tests/AppDelegate.cpp +tests/AppDelegate.h +tests/tests/controller.cpp +tests/tests/controller.h +tests/tests/tests.h +tests/tests/testBasic.cpp +tests/tests/testBasic.h +tests/tests/testResource.h +tests/tests/AccelerometerTest +tests/tests/ActionManagerTest +tests/tests/ActionsTest +tests/tests/Box2DTest +tests/tests/Box2DTestBed +tests/tests/BugsTest +tests/tests/ChipmunkTest +tests/tests/ClickAndMoveTest +tests/tests/CocosDenshionTest +tests/tests/CocosNodeTest +tests/tests/CurrentLanguageTest +tests/tests/DirectorTest +tests/tests/DrawPrimitivesTest +tests/tests/EaseActionsTest +tests/tests/EffectsAdvancedTest +tests/tests/EffectsTest +tests/tests/FontTest +tests/tests/HiResTest +tests/tests/IntervalTest +tests/tests/KeypadTest +tests/tests/LabelTest +tests/tests/LayerTest +tests/tests/MenuTest +tests/tests/MotionStreakTest +tests/tests/ParallaxTest +tests/tests/ParticleTest +tests/tests/PerformanceTest +tests/tests/ProgressActionsTest +tests/tests/RenderTextureTest +tests/tests/RotateWorldTest +tests/tests/SceneTest +tests/tests/SchedulerTest +tests/tests/SpriteTest +tests/tests/Texture2dTest +tests/tests/TextureCacheTest +tests/tests/TileMapTest +tests/tests/TouchesTest +tests/tests/TransitionsTest +tests/tests/ZwoptexTest +tests/tests tests/tests/CurlTest tests/tests/UserDefaultTest"/>
+<property key="profile.mgr.type" value="0"/>
+<property key="template.id" value="project.empty"/>
+</properties>
+</project>

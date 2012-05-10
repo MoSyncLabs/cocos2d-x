@@ -22,7 +22,7 @@
 #include "IntervalTest/IntervalTest.h"
 #include "LabelTest/LabelTest.h"
 // havn't implement on airplay
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_AIRPLAY)
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_AIRPLAY && CC_TARGET_PLATFORM != CC_PLATFORM_MOSYNC)
 #include "TextInputTest/TextInputTest.h"
 #endif
 #include "SpriteTest/SpriteTest.h"

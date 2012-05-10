@@ -78,3 +78,4 @@ public:
 	// void nextCallback(CCObject* pSender);
 	// void backCallback(CCObject* pSender);
 };
+

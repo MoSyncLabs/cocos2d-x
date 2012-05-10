@@ -289,3 +289,37 @@ void CCMessageBox(const char * pszMsg, const char * pszTitle)
 NS_CC_END;
 
 #endif // CC_PLATFORM_BADA
+
+/****************************************************
+ * mosync
+ ***************************************************/
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_MOSYNC)
+
+#include <ma.h>
+#include <stdio.h>
+
+NS_CC_BEGIN;
+
+void CCLog(const char * pszFormat, ...)
+{
+	char buf[MAX_LEN];
+
+	va_list args;
+	va_start(args, pszFormat);
+	int ret = vsprintf(buf, pszFormat, args);
+	va_end(args);
+
+	if(ret>0)
+		maWriteLog(buf, ret);
+}
+
+// airplay no MessageBox, use CCLog instead
+void CCMessageBox(const char * pszMsg, const char * pszTitle)
+{
+    //CCLog("%s: %s", pszTitle, pszMsg);
+    maMessageBox(pszTitle, pszMsg);
+}
+
+NS_CC_END;
+
+#endif // CC_PLATFORM_MOSYNC

@@ -66,3 +66,4 @@ namespace cocos2d {
 
 }// namespace cocos2d
 #endif //__CCTMX_OBJECT_GROUP_H__
+

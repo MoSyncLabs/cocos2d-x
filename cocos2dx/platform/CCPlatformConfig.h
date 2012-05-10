@@ -44,6 +44,7 @@ build for which target platform
 #define CC_PLATFORM_WIN32              4
 #define CC_PLATFORM_AIRPLAY            5
 #define CC_PLATFORM_LINUX              7
+#define CC_PLATFORM_MOSYNC            8
 
 #define CC_PLATFORM_BADA               6
 // Determine tartet platform by compile environment macro.
@@ -99,6 +100,11 @@ build for which target platform
 #undef  CC_TARGET_PLATFORM
 #define CC_TARGET_PLATFORM         CC_PLATFORM_BADA
 #endif
+// mosync
+#if ! CC_TARGET_PLATFORM && defined(MAPIP)
+#undef  CC_TARGET_PLATFORM
+#define CC_TARGET_PLATFORM         CC_PLATFORM_MOSYNC
+#endif
 //////////////////////////////////////////////////////////////////////////
 // user configure
 //////////////////////////////////////////////////////////////////////////
@@ -136,6 +142,11 @@ build for which target platform
 #if defined(CC_UNDER_BADA)
 #undef  CC_TARGET_PLATFORM
 #define CC_TARGET_PLATFORM			   CC_PLATFORM_BADA
+#endif
+
+#if defined(CC_UNDER_MOSYNC)
+#undef  CC_TARGET_PLATFORM
+#define CC_TARGET_PLATFORM			   CC_PLATFORM_MOSYNC
 #endif
 
 // Check user assigned supportive of multi-thread

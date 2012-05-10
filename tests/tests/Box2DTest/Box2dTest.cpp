@@ -223,4 +223,3 @@ void Box2DTestScene::runThisTest()
 
     CCDirector::sharedDirector()->replaceScene(this);
 }
- 
